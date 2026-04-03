@@ -1,0 +1,6 @@
+Room,Pressure,Zone
+Cleanroom_01,25.2,Clean
+Cleanroom_02,24.9,Clean
+Airlock,23.6,Transition
+Corridor,12.5,Dirty
+Storage,,Dirty
