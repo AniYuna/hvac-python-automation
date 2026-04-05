@@ -10,11 +10,14 @@ extract = rest_room_data.loc[rest_room_data['Type'] == 'Extract', 'Flow_m3h'].su
 
 balance = supply - extract
 
-print("--- АНАЛИЗ ВОЗДУХООБМЕНА САУНЫ ---")
+print("--- SAUNA AIRFLOW BALANCE REPORT ---")
 print(df)
-print(f"\nБаланс в комнате отдыха: {balance} м3/ч")
+print(f"\nRoom: Rest_room")
+print(f"Supply airflow:  {supply} m3/h")
+print(f"Extract airflow: {extract} m3/h")
+print(f"Balance in the break room: {balance} m3/h")
 
 if balance > 0:
-    print("Результат: Подпор (все отлично для чистой зоны)")
+    print("\nResult: POSITIVE PRESSURE (Aii right for a recreation area)")
 else:
-    print("Результат: Разрежение (проверьте настройки!)")
+    print("\nResult: NEGATIVE PRESSURE (check settings!)")

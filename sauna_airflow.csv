@@ -1,6 +1,6 @@
 System,Flow_m3h,Type,Room
-P1,120,Supply,Rest_room
-P1,130,Supply,Sauna_steam
-V1,135,Extract,Shower
-V2,10,Extract,Hall
-V2,130,Extract,Sauna_steam
+S1,120,Supply,Rest_room
+S1,130,Supply,Sauna_steam
+E1,135,Extract,Shower
+E2,10,Extract,Hall
+E2,130,Extract,Sauna_steam
