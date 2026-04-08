@@ -34,7 +34,7 @@ Use case: validation of pressure conditions between different types of rooms
 Calculates air velocities in duct cross-sections and exports results.
 
 - creates a multi-column DataFrame from individual data series
-- calculates velocity ($V = L / (3600 * S)$) using the `math` library
+- calculates velocity (V = L / (3600 * S)) using the `math` library
 - uses the double-bracket technique `[[]]` for advanced DataFrame indexing
 - exports the final engineering report to a `.csv` file
 
