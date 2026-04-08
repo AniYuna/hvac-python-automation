@@ -26,3 +26,16 @@ Analyzes pressure conditions in clean and dirty rooms.
 - generates a simple report
 
 Use case: validation of pressure conditions between different types of rooms
+
+---
+
+### 3. hvac_vent_velocity_data.py
+
+Calculates air velocities in duct cross-sections and exports results.
+
+- creates a multi-column DataFrame from individual data series
+- calculates velocity ($V = L / (3600 * S)$) using the `math` library
+- uses the double-bracket technique `[[]]` for advanced DataFrame indexing
+- exports the final engineering report to a `.csv` file
+
+Use case: quick aerodynamic check and automated reporting for multiple ventilation branches
