@@ -1,7 +1,8 @@
 # HVAC System Automation in Python
-These projects demonstrate how Python (Pandas) can be used to automate basic checks of various parameters in HVAC systems.
+These projects demonstrate how Python (Pandas) can be used to automate validation and analysis of HVAC system parameters based on real engineering scenarios.
 ## About Me
-I have experience in HVAC system design and am currently exploring how to combine engineering solutions with data analysis and automation.
+HVAC design engineer with hands-on experience in ventilation systems and building modeling (Revit).
+Currently focusing on combining engineering workflows with data analysis and automation using Python.
 ## Available scripts
 
 ### 1. sauna_check.py
