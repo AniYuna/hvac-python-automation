@@ -1,62 +1,54 @@
 # HVAC System Automation in Python
 
-This repository demonstrates how Python (Pandas) can be used to automate validation and analysis of HVAC system parameters based on real engineering workflows.
-
-Instead of performing repetitive manual checks, these scripts help quickly verify system performance and identify potential issues.
+Python (Pandas) scripts for automating validation of HVAC system parameters based on real engineering workflows.
 
 ---
 
-##  Engineering context
+## What this solves
 
-In HVAC design, tasks such as airflow balancing, pressure verification, and velocity calculations are often repetitive and time-consuming.
+In HVAC design, checks like airflow balance, pressure differences, and duct velocities are repetitive and time-consuming when done manually.
 
-These scripts show how such checks can be automated, allowing engineers to focus on system analysis and decision-making rather than manual validation.
-
----
-
-##  About Me
-
-HVAC design engineer with hands-on experience in ventilation systems and BIM modeling (Revit).
-
-Currently focused on combining engineering workflows with data analysis and automation using Python.
+These scripts automate such validations to improve speed and consistency.
 
 ---
 
-##  Available scripts
+## Scripts
 
 ### 1. sauna_check.py
+Airflow balance validation.
 
-Checks airflow balance in a ventilation system.
-
-- reads airflow data from CSV  
-- calculates supply and exhaust balance  
-- verifies required pressure conditions  
-
-**Use case:**  
-Quick validation of airflow balance for a single system (e.g. sauna or small ventilation unit)
+- reads data from CSV  
+- calculates supply/exhaust balance  
+- checks pressure conditions  
 
 ---
 
 ### 2. hvac_file_reader.py
+Pressure difference validation.
 
-Analyzes pressure conditions between clean and dirty rooms.
-
-- reads pressure data from CSV  
-- checks pressure differences (e.g. > 20 Pa)  
-- generates a simple validation report  
-
-**Use case:**  
-Verification of pressure zoning requirements in buildings (e.g. medical or industrial spaces)
+- reads pressure data  
+- checks required limits (e.g. > 20 Pa)  
+- outputs simple report  
 
 ---
 
 ### 3. hvac_vent_velocity_data.py
+Duct velocity calculation.
 
-Calculates air velocities in duct sections and exports results.
-
-- builds structured DataFrame from input data  
-- calculates velocity using standard engineering formula  
+- processes input data with Pandas  
+- calculates air velocity  
 - exports results to CSV  
 
-**Use case:**  
-Automated aerodynamic checks and reporting for multiple ventilation branches
+---
+
+## Example
+
+Airflow balance check automated instead of manual table verification.
+
+**Result:** faster validation and reduced risk of oversight.
+
+---
+
+## Tech
+
+Python, Pandas
