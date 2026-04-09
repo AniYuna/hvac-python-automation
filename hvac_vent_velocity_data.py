@@ -9,14 +9,14 @@ status = pd.Series(['designed', 'ready', 'under testing', 'designed', 'ready'])
 # Создаем из каждого Series один DataFrame
 df_systems = pd.DataFrame({
     'Room_name': room,
+    'Status': status,
     'Air_flow_m3/h': air,
-    'Diameter_mm': diameter,
-    'Status': status
+    'Diameter_mm': diameter    
 })
 print("\n--- Ventilation velocities data ---")
 # Расчет скорости в воздуховодах: V = L / (3600 * S)
-df_systems['Area_m2'] = ((np.pi * (df_systems['Diameter_mm'] / 1000) ** 2) / 4)
-df_systems['Velocity_m/s'] = df_systems['Air_flow_m3/h'] / (3600 * df_systems['Area_m2'])
+df_systems['Area_D_m2'] = ((np.pi * (df_systems['Diameter_mm'] / 1000) ** 2) / 4)
+df_systems['Velocity_m/s'] = df_systems['Air_flow_m3/h'] / (3600 * df_systems['Area_D_m2'])
 df_systems['Status_velocity'] = df_systems['Velocity_m/s'].apply(
     lambda x: 'OK' if 2 <= x <= 5 else 'Check'
 )
@@ -25,4 +25,4 @@ print(df_systems.round(3)) # Округляем значение скорост�
 final_table = df_systems[['Room_name', 'Velocity_m/s', 'Status_velocity']].rename(columns={'Velocity_m/s': 'V_m/s'})
 # Сохраняем результат в файл Excel-формата (CSV)
 final_table.to_csv('vent_velocity_report.csv', index=False)
-print("Report saved successfully!")
+print("\nReport saved successfully!")
